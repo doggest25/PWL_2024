@@ -49,6 +49,10 @@ Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
     Route::get('/about', [AboutController::class,'about']);
     Route::get('/articles/{id}', [ArticleController::class,'articles']);
 
+    Route::get('/', [PageController::class,'home']);
+    Route::get('/about', [PageController::class,'about']);
+    Route::get('/articles/{id}', [PageController::class,'articles']);
+
     //Resource Controller
     Route::resource('photos', PhotoController::class);
 
